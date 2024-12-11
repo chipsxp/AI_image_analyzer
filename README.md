@@ -7,9 +7,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 I will transform this project to a Vite@latest using react library is one of the proper way of utilizing react development
 
-### `npm run dev`
+Done to upgrade to the latest version of Vite react and react-dom, and also to use the latest version of the openai api
 
-clone repository and npm install command afterwards. Make .env file for the OpenAi key and label the keyas as OPENAI_API_KEY = blah b from the dashboard.
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+clone repository and npm install command afterwards. Make .env file for the OpenAi key and label the keyas as OPENAI_API_KEY = blah blah from the dashboard.
+
+# Not Available Scripts Yet
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -18,6 +26,8 @@ You may also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+## Available Scripts
 
 ### `npm run build`
 

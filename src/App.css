@@ -122,6 +122,59 @@
   line-height: 1.4;
 }
 
+/* Progress Bar */
+.progress-container {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-bar-inner {
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+  border-radius: 4px;
+  animation: progress 2s ease-in-out infinite;
+  transform-origin: left;
+}
+
+.analyzing-text {
+  color: #4a90e2;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
 /* File Upload */
 label[for="files"] {
   display: inline-block;

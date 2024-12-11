@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
   const [value, setValue] = useState("");
   const [response, setResponse] = useState("");
   const [error, setError] = useState("");
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
 
   const surpriseOptions = [
     "Is it cute?",
@@ -44,12 +45,14 @@ function App() {
 
   const analyzeImage = async () => {
     setResponse("");
+    setError("");
     if (!image) {
       setError("Please upload an image first");
       setValue("");
       return;
     }
     try {
+      setIsAnalyzing(true);
       const options = {
         method: "POST",
         body: JSON.stringify({
@@ -66,6 +69,8 @@ function App() {
     } catch (error) {
       console.log(error);
       setError(error);
+    } finally {
+      setIsAnalyzing(false);
     }
   };
 
@@ -74,6 +79,7 @@ function App() {
     setValue("");
     setResponse("");
     setError("");
+    setIsAnalyzing(false);
   };
 
   return (
@@ -138,11 +144,21 @@ function App() {
             onChange={(event) => setValue(event.target.value)}
             type="text"
           />
-          {!response && !error && (
+          {!response && !error && !isAnalyzing && (
             <button onClick={analyzeImage}>Ask The A.I.</button>
           )}
-          {(response || error) && <button onClick={clear}>Clear</button>}
+          {(response || error) && !isAnalyzing && (
+            <button onClick={clear}>Clear</button>
+          )}
         </div>
+        {isAnalyzing && (
+          <div className="progress-container">
+            <div className="progress-bar">
+              <div className="progress-bar-inner"></div>
+            </div>
+            <p className="analyzing-text">Analyzing image...</p>
+          </div>
+        )}
         {error && <p className="error">{error}</p>}
         {response && <p className="response">{response}</p>}
       </section>
