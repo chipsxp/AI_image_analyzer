@@ -71,7 +71,7 @@
 
 .image-container .placeholder p {
   color: #94a3b8;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   margin: 0;
   padding: 0;
@@ -105,7 +105,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #1a202c;
 }
 
@@ -148,7 +148,7 @@
 
 .analyzing-text {
   color: #4a90e2;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin: 0;
   animation: pulse 2s ease-in-out infinite;
@@ -187,7 +187,7 @@ label[for="files"] {
   font-weight: 600;
   text-align: center;
   box-shadow: 0 4px 6px rgba(74, 144, 226, 0.2);
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 label[for="files"]:hover {
@@ -204,7 +204,7 @@ input[type="file"] {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.4rem;
 }
 
 .question input[type="text"] {
@@ -212,7 +212,7 @@ input[type="file"] {
   padding: 1.2rem;
   border: 2px solid #e2e8f0;
   border-radius: 12px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   transition: all 0.3s ease;
   background: white;
   color: #2d3748;
@@ -232,7 +232,7 @@ input[type="file"] {
 
 .question input[type="text"]::placeholder {
   color: #a0aec0;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 /* Buttons */
@@ -243,7 +243,7 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -276,7 +276,7 @@ button:not(.surprise):hover {
   margin-top: 1.8rem;
   padding: 1.5rem;
   border-radius: 12px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
@@ -291,6 +291,10 @@ button:not(.surprise):hover {
   background: #fff5f5;
   color: #c53030;
   border-left: 6px solid #fc8181;
+}
+
+.arrow {
+  font-size:2.8rem;
 }
 
 /* Mobile Adjustments */
@@ -318,11 +322,15 @@ button:not(.surprise):hover {
   button,
   label[for="files"] {
     padding: 0.8rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .question input[type="text"] {
     padding: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+  .arrow {
+    font-size:2.2rem;
+    transform: rotate(90deg);
   }
 }

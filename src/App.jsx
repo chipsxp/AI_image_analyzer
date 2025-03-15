@@ -111,14 +111,18 @@ function App() {
                 />
                 <circle cx="9" cy="9" r="2" stroke="#94A3B8" strokeWidth="2" />
               </svg>
-              <p>Click or drag image here</p>
+              <p>Image Preview after Upload</p>
+              <div className="arrow">→</div>
             </div>
           )}
         </div>
       </section>
       <section className="info-section">
         <p className="extra-info">
-          <span>Ask The A.I Your Question, Please</span>
+          <span>ChipsXP AI Image Analyzer</span>
+        </p>
+        <p className="extra-info">
+          <span>Ask The A.I Your Question</span>
         </p>
         <p>
           <span>
@@ -131,7 +135,7 @@ function App() {
             />
           </span>
         </p>
-        <p>
+        <p className="info-section">
           About This Image
           <button className="surprise" onClick={surprise}>
             I Feel Lucky
