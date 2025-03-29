@@ -3,7 +3,7 @@
 Used older create-react-app to make this AI app
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Works Great for Iamge Analyzing
+## Works Great for Image Analyzing
 
 I will transform this project to a Vite@latest using react library is one of the proper way of utilizing react development
 
