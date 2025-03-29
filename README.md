@@ -1,4 +1,6 @@
-# Deprecated Create React App
+#Converted to Vite@latest recently.
+
+## Deprecated Create React App
 
 Used older create-react-app to make this AI app
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
